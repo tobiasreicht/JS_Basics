@@ -39,4 +39,4 @@ else if (number > 7 && number < 90) {
 }
 else if (number >= 90) {
     console.log("large")
-};
+}
