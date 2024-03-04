@@ -1,43 +1,62 @@
-//schwere variante
+let grid = "";
 
-output = "";
-output2  = "";
-output3 = "";
-output4 = "";
-
-
-for (let index = 1; index < 20; index++) {
-    if (index <5)   {
-        output += "x";
-        console.log(output);
+for (let index = 1; index <= 16; index++) {
+    if (index  <= 4 ) {
+        grid += "x";
+    } 
+    else if (index <=8 ) {
+        grid += "o";
     }
-    if (index >5 && index <10) {
-        output2 += "O";
-        console.log(output2);
-        }
-    if (index >10 && index <15) {
-        output3 += "x";
-        console.log(output3);
-        }
-    if (index >15 && index <20) {
-        output4 += "O";
-        console.log(output4);
-        }
-    
+    else if (index <=12 ) {
+        grid += "x";
+    }
+    else if (index <=16 ) {
+        grid  += "o";
+    }
+
+    if((index % 4) == 0) {
+        grid += "\n";
+    }
 }
 
-//einfache variante
+
+console.log(grid);
 
 
-for (let index = 0; index < 4; index++) {
-    if (index  == 0 ) {
-        for (let i = 0; i < 4; i++) {
-            output += "x";
-        }
-    } else if (index == 1) {
-            output += "o";
-        }
+
+//Versuche in einer for - Schleife (1-100)
+//alle geraden Zahlen zu addieren 
+//(zwei Lösungswege ⇒ Zähler dahingehend verändern das er nur gerade Zahlen zählt und mit Modulo arbeiten.) 
+let result = 0;
+for (let index = 0; index <= 100; index++) {
+    if ((index % 2) == 0)
+    {
+        result += index;
+    }
+}
+console.log(result);
+
+
+
+
+let grid1 = "";
+
+for (let index = 1; index <= 6; index++) {
+    if (index  <= 4 ) {
+        grid1 += "x";
+    } 
+    else if (index == 5 ) {
+        grid1 += "   x";
+    }
+    else if (index == 6 ) {
+        grid1 += "   x";
+    }
+    if(index == 5 && 6) {
+        grid1 += "\n";
     }
 
+    console.log(grid1);
+}
 
-console.log(output);
+
+
